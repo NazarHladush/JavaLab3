@@ -3,6 +3,7 @@ package ua.lviv.iot.athletics.managers;
 import ua.lviv.iot.athletics.models.Athletics;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SportManagerImpl implements SportManager {
@@ -24,14 +25,26 @@ public class SportManagerImpl implements SportManager {
     }
 
     @Override
-    public List<Athletics> sortAverageDuration() {
-        athletics.sort((Athletics a1, Athletics a2) -> (Double.compare(a1.getAverageDuration(), a2.getAverageDuration())));
-        return athletics;
+    public void sortAverageDuration(List<Athletics> athletics, boolean reverse) {
+
+        if (reverse) {
+            Collections.sort(athletics, Comparator.comparing(Athletics::getAverageDuration).reversed());
+            athletics.stream().forEach(System.out::println);
+
+        }
+        else {
+            Collections.sort(athletics, Comparator.comparing(Athletics::getAverageDuration));
+            athletics.stream().forEach(Athletics::getAverageDuration);
+        }
     }
 
     @Override
-    public List<Athletics> sortMaxfAthleteCount() {
-        athletics.sort((Athletics a1, Athletics a2) -> (Integer.compare(a1.getMaxfAthleteCount(), a2.getMaxfAthleteCount())));
-        return athletics;
+    public void sortMaxfAthleteCount(List<Athletics> athletics, boolean reverse) {
+        if (reverse){
+            Collections.sort(athletics, Comparator.comparing(Athletics::getMaxfAthleteCount).reversed());
+        }
+        else {
+            Collections.sort(athletics, Comparator.comparing(Athletics::getMaxfAthleteCount));
+        }
     }
 }

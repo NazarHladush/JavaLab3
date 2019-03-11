@@ -7,7 +7,7 @@ import java.util.List;
 public interface SportManager {
     List<Athletics> searchKindsOfSports(boolean availabilityFinishLine);
 
-    List<Athletics> sortAverageDuration();
+    void sortAverageDuration(List<Athletics> athletics, boolean reverse);
 
-    List<Athletics> sortMaxfAthleteCount();
+    void sortMaxfAthleteCount(List<Athletics> athletics, boolean reverse);
 }

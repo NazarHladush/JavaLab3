@@ -30,13 +30,11 @@ public class Main {
 
         manager.searchKindsOfSports(true);
 
-        List<Athletics> athletics1 = manager.sortAverageDuration();
-        athletics1.forEach(athletic -> System.out.println("sortAverageDuration: " +
-                athletic.getNameKindOfSports()+ "  " + athletic.getAverageDuration()));
+        manager.sortAverageDuration(athletics, true);
 
-        List<Athletics> athletics2 = manager.sortMaxfAthleteCount();
-        athletics2.forEach(athletic -> System.out.println("sortMaxfAthleteCount: " +
-                athletic.getNameKindOfSports() + "  " + athletic.getMaxfAthleteCount()));
+
+        manager.sortMaxfAthleteCount(athletics, true);
+
     }
 
 }

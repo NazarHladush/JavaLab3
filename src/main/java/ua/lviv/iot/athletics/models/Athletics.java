@@ -6,13 +6,17 @@ public abstract class Athletics {
     private String nameKindOfSports;
     private boolean availabilityFinishLine;
     private double averageDuration;
-    protected double length;
+    private double length;
 
 
-    public  Athletics(){
+    public  Athletics() {
     }
 
-    public Athletics(int maxfAthleteCount, String nameKindOfSports, boolean availabilityFinishLine, double averageDuration, double length) {
+    public Athletics(final int maxfAthleteCount,
+                     final String nameKindOfSports,
+                     final boolean availabilityFinishLine,
+                     final double averageDuration,
+                     final double length) {
         this.maxfAthleteCount = maxfAthleteCount;
         this.nameKindOfSports = nameKindOfSports;
         this.availabilityFinishLine = availabilityFinishLine;
@@ -24,7 +28,7 @@ public abstract class Athletics {
         return maxfAthleteCount;
     }
 
-    public void setMaxfAthleteCount(int maxfAthleteCount) {
+    public void setMaxfAthleteCount(final int maxfAthleteCount) {
         this.maxfAthleteCount = maxfAthleteCount;
     }
 
@@ -32,7 +36,7 @@ public abstract class Athletics {
         return nameKindOfSports;
     }
 
-    public void setNameKindOfSports(String nameKindOfSports) {
+    public void setNameKindOfSports(final String nameKindOfSports) {
         this.nameKindOfSports = nameKindOfSports;
     }
 
@@ -40,7 +44,8 @@ public abstract class Athletics {
         return availabilityFinishLine;
     }
 
-    public void setAvailabilityFinishLine(boolean availabilityFinishLine) {
+    public void setAvailabilityFinishLine(
+            final boolean availabilityFinishLine) {
         this.availabilityFinishLine = availabilityFinishLine;
     }
 
@@ -48,7 +53,7 @@ public abstract class Athletics {
         return averageDuration;
     }
 
-    public void setAverageDuration(double averageDuration) {
+    public void setAverageDuration(final double averageDuration) {
         this.averageDuration = averageDuration;
     }
 
@@ -56,7 +61,8 @@ public abstract class Athletics {
         return length;
     }
 
-    public void setLength(double length) {
+    public void setLength(final double length) {
         this.length = length;
     }
+
 }

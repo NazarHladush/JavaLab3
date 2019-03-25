@@ -1,16 +1,20 @@
 package ua.lviv.iot.athletics;
 
 import ua.lviv.iot.athletics.managers.SportManagerImpl;
-import ua.lviv.iot.athletics.models.*;
-
-
+import ua.lviv.iot.athletics.models.Athletics;
+import ua.lviv.iot.athletics.models.Throw;
+import ua.lviv.iot.athletics.models.ThrowType;
+import ua.lviv.iot.athletics.models.SportWalking;
+import ua.lviv.iot.athletics.models.Run;
+import ua.lviv.iot.athletics.models.RunType;
+import ua.lviv.iot.athletics.models.Jumping;
+import ua.lviv.iot.athletics.models.JumpType;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Main {
-
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         List<Athletics> athletics = new ArrayList();
         athletics.add(new Throw(16, "Throw",
@@ -32,9 +36,7 @@ public class Main {
 
         manager.sortAverageDuration(athletics, true);
 
-
         manager.sortMaxfAthleteCount(athletics, true);
 
     }
-
 }

@@ -21,6 +21,18 @@ public class SportWalking extends Athletics {
         this.time = time;
     }
 
+    public String getHeaders() {
+        return super.getHeaders()
+                + ", time"
+                + ", speed";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + ", " + time
+                + ", " + speed;
+    }
+
     public double getTime() {
         return time;
     }

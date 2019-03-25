@@ -11,15 +11,15 @@ public class SportManagerImpl implements SportManager {
 
     private List<Athletics> athletics = new LinkedList<>();
 
-    public void setAthletics(final List<Athletics> athletics) {
-        this.athletics = athletics;
-    }
-
     public SportManagerImpl(final List<Athletics> athletics) {
         this.athletics = athletics;
     }
 
     public SportManagerImpl() {
+    }
+
+    public void setAthletics(final List<Athletics> athletics) {
+        this.athletics = athletics;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class SportManagerImpl implements SportManager {
 
     @Override
     public List<Athletics> sortMaxfAthleteCount(final List<Athletics> athletics,
-                                     final boolean reverse) {
+                                                final boolean reverse) {
         if (reverse) {
             Collections.sort(athletics, Comparator.comparing(
                     Athletics::getMaxfAthleteCount).reversed());

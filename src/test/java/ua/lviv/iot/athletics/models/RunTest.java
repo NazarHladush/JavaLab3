@@ -2,7 +2,7 @@ package ua.lviv.iot.athletics.models;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RunTest {
     @Test

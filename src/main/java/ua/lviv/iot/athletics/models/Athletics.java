@@ -9,7 +9,7 @@ public abstract class Athletics {
     private double length;
 
 
-    public  Athletics() {
+    public Athletics() {
     }
 
     public Athletics(final int maxfAthleteCount,
@@ -22,6 +22,22 @@ public abstract class Athletics {
         this.availabilityFinishLine = availabilityFinishLine;
         this.averageDuration = averageDuration;
         this.length = length;
+    }
+
+    public String getHeaders() {
+        return "maxfAthleteCount, "
+                + "nameKindOfSports, "
+                + "availabilityFinishLine ,"
+                + "averageDuration ,"
+                + "length";
+    }
+
+    public String toCSV() {
+        return maxfAthleteCount + ", "
+                + nameKindOfSports + ", "
+                + availabilityFinishLine + ", "
+                + averageDuration + ", "
+                + length;
     }
 
     public int getMaxfAthleteCount() {

@@ -99,3 +99,4 @@ class SportManagerImplTest {
         Assertions.assertNotNull(resultAthletics);
     }
 }
+

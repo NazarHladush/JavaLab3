@@ -21,6 +21,18 @@ public class Jumping extends Athletics {
         this.height = height;
     }
 
+    public String getHeaders() {
+        return super.getHeaders()
+                + ", kindOfJump"
+                + ", height";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + ", " + kindOfJump
+                + ", " + height;
+    }
+
     public JumpType getKindOfJump() {
         return kindOfJump;
     }

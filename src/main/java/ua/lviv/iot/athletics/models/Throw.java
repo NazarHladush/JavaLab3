@@ -2,7 +2,7 @@ package ua.lviv.iot.athletics.models;
 
 public class Throw extends Athletics {
 
-    private  ThrowType kindOfThrow;
+    private ThrowType kindOfThrow;
 
     public Throw() {
     }
@@ -16,6 +16,16 @@ public class Throw extends Athletics {
         super(maxfAthleteCount, nameKindOfSports, availabilityFinishLine,
                 averageDuration, length);
         this.kindOfThrow = kindOfThrow;
+    }
+
+    public String getHeaders() {
+        return super.getHeaders()
+                + ", kindOfThrow";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + ", " + kindOfThrow;
     }
 
     public ThrowType getKindOfThrow() {

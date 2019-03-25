@@ -24,6 +24,20 @@ public class Run extends Athletics {
         this.speed = speed;
     }
 
+    public String getHeaders() {
+        return super.getHeaders()
+                + ", kindOfRun"
+                + ", time"
+                + ", speed";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + ", " + kindOfRun
+                + ", " + time
+                + ", " + speed;
+    }
+
     public RunType getKindOfRun() {
         return kindOfRun;
     }

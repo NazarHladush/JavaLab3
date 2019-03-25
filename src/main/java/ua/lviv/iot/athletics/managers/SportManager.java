@@ -11,7 +11,7 @@ public interface SportManager {
                                         final boolean reverse);
 
     List<Athletics> sortMaxfAthleteCount(final List<Athletics> athletics,
-                              final boolean reverse);
+                                         final boolean reverse);
 
     void addAthletics(Athletics athletic);
 

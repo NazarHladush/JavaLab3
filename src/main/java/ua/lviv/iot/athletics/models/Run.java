@@ -1,5 +1,9 @@
 package ua.lviv.iot.athletics.models;
 
+import javax.persistence.*;
+
+@Entity
+@Inheritance
 public class Run extends Athletics {
 
     private RunType kindOfRun;
